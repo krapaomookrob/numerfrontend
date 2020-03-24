@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Root from '../views/Root.vue'
+import Matrix from '../views/Matrix.vue'
+import Derv from '../views/Derivative.vue'
+import Ing from '../views/Integration.vue'
+import Reg from '../views/Regression.vue'
+import Interpolation from '../views/Interpolation.vue'
 
 Vue.use(VueRouter)
 
@@ -11,12 +17,33 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path:'/rootofequation',
+    name:'roe',
+    component:Root
+  },
+  {
+    path:'/matrix',
+    name:'matrix',
+    component:Matrix
+  },
+  {
+    path:'/derivative',
+    name:'derv',
+    component:Derv
+  },
+  {
+    path:'/integration',
+    name:'ing',
+    component:Ing
+  },
+  {
+    path:'/regression',
+    name:'reg',
+    component:Reg
+  },{
+    path:'/interpolation',
+    name:'inter',
+    component:Interpolation
   }
 ]
 
